@@ -28,6 +28,17 @@
         <source-file src="src/android/UpdateApp.java" target-dir="src/com/phonegap/plugins/updateapp" />
         <source-file src="src/android/softupdate_progress.xml" target-dir="res/layout"/>
 
+        <!-- copy from
+        https://github.com/shougao/cordova-plugin-apkinstaller/blob/master/plugin.xml
+        -->
+        <source-file src="src/android/res/xml/updateapp_file_paths.xml" target-dir="res/xml" />
+        
+        <config-file target="AndroidManifest.xml" parent="application">
+            <provider android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+                <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/updateapp_file_paths" />
+            </provider>
+        </config-file>
+
         <config-file target="res/values/strings.xml" parent="/resources">
             <string name="soft_update_no">已经是最新版本</string>
             <string name="soft_update_title">软件更新</string>

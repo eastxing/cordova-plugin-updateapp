@@ -1,0 +1,19 @@
+{
+  "name": "cordova.plugin.updateapp",
+  "version": "1.1.0",
+  "description": "应用内提示更新",
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eastxing/cordova-plugin-updateapp.git"
+  },
+  "keywords": [
+    "cordova",
+    "update"
+  ],
+  "author": ""
+}
