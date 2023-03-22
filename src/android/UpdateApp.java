@@ -244,6 +244,9 @@ public class UpdateApp extends CordovaPlugin {
         // modify by jdj
         // builder.setTitle(R.string.soft_updating);
         builder.setTitle(getResourceString("soft_updating"));
+
+        // reset cancel download flag
+        cancelUpdate = false;
         // end modify
         
         // 给下载对话框增加进度条
